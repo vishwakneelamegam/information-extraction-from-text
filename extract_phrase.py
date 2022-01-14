@@ -33,7 +33,7 @@ class nlp:
       return []
   def recheck(self):
     try:
-      self.results = [word.strip() for word in self.results if word.strip() != ""]
+      self.results = [word.strip() for word in self.results if word.strip() != "" and word.strip() not in stopwords.words('english')]
       return True
     except Exception as e:
       return False
