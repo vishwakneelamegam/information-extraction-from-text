@@ -1,4 +1,4 @@
-# information-extraction-using-python
+# information-extraction-from-text
 Extract information from given sentence
 ## Module used
 nltk, word_tokenize and stopwords
