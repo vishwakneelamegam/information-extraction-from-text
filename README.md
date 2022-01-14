@@ -2,6 +2,8 @@
 Extract information from given sentence
 ## Module used
 nltk, word_tokenize and stopwords
+## Supported language
+English
 ## Test URL
 https://api.sailors.ai/
 ## Example
