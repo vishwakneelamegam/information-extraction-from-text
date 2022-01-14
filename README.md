@@ -1,4 +1,4 @@
-# named-entity-detection-using-python
-Named entity recognition using python nltk
+# phrase-detection-using-python
+Extract phrases from given sentence
 ## Module used
 nltk
