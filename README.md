@@ -1,7 +1,7 @@
 # information-extraction-from-text
 Extract information from given sentence
 ## Module used
-nltk, word_tokenize
+nltk, nltk -> word_tokenize, nltk.corpus -> stopwords
 ## Supported language
 English
 ## Test URL
