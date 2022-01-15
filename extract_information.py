@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 class nlp:
   def __init__(self,input):
     self.noun = ["NN","NNS","NNP","NNPS","CD","JJ","JJR","JJS","DT"]
-    self.verb = ["MD","VB","VBG","VBD","VBN","VBP","VBZ","RB","JJ","JJR","JJS","RBR","RBS","RP"]
+    self.verb = ["MD","VB","VBG","VBD","VBN","VBP","VBZ","RB","RBR","RBS","RP"]
     self.input = input
     self.tags = []
     self.results = []
@@ -26,14 +26,14 @@ class nlp:
       return False
   def filter(self,word_list):
     try:
-      result = [word.strip() for word in word_list if word.strip() not in stopwords.words('english')]
+      result = [word.strip() for word in word_list if word.strip() != ""]
       return result
     except Exception as e:
       self.download()
       return []
   def recheck(self):
     try:
-      self.results = [word.strip() for word in self.results if word.strip() != "" and word.strip() not in stopwords.words('english')]
+      self.results = [word.strip() for word in self.results if word.strip() != ""]
       return True
     except Exception as e:
       return False
@@ -91,5 +91,5 @@ class nlp:
     except Exception as e:
       return "error occurred"
 
-obj = nlp("the black cat is under the table")
+obj = nlp("the blood sugar was low at monday morning")
 obj.process()
